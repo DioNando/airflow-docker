@@ -11,6 +11,13 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__LOAD_EXAMPLES: "true"
     AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+    AIRFLOW__SMTP__SMTP_HOST: maildev
+    AIRFLOW__SMTP__SMTP_PORT: 1025
+    AIRFLOW__SMTP__SMTP_USER:
+    AIRFLOW__SMTP__SMTP_PASSWORD:
+    AIRFLOW__SMTP__SMTP_MAIL_FROM: airflow@example.com
+    AIRFLOW__SMTP__SMTP_STARTTLS: 'False'
+    AIRFLOW__SMTP__SMTP_SSL: 'False'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
@@ -240,6 +247,12 @@ services:
       ME_CONFIG_MONGODB_SERVER: mongodb
     ports:
       - "8081:8081"
+
+  maildev:
+    image: maildev/maildev
+    ports:
+      - "1080:1080"  # Interface web de MailDev
+      - "1025:1025"  # Port SMTP
 
 volumes:
   postgres-db-volume:

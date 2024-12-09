@@ -1,0 +1,7 @@
+[2024-12-07T20:07:06.006+0000] {processor.py:186} INFO - Started process (PID=64) to work on /opt/airflow/dags/data_extraction.py
+[2024-12-07T20:07:06.007+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_extraction.py for tasks to queue
+[2024-12-07T20:07:06.010+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:06.010+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_extraction.py
+[2024-12-07T20:07:06.027+0000] {processor.py:925} INFO - DAG(s) 'data_extraction' retrieved from /opt/airflow/dags/data_extraction.py
+[2024-12-07T20:07:06.058+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:06.057+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T20:07:06.081+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:06.081+0000] {dag.py:4180} INFO - Setting next_dagrun for data_extraction to 2024-12-06 00:00:00+00:00, run_after=2024-12-07 00:00:00+00:00
+[2024-12-07T20:07:06.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_extraction.py took 0.099 seconds

@@ -1,0 +1,35 @@
+[2024-12-09T20:24:29.505+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-09T20:24:29.520+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_branch_python_operator_decorator.branching_ext_python scheduled__2024-12-07T00:00:00+00:00 [queued]>
+[2024-12-09T20:24:29.528+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_branch_python_operator_decorator.branching_ext_python scheduled__2024-12-07T00:00:00+00:00 [queued]>
+[2024-12-09T20:24:29.529+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-09T20:24:29.542+0000] {taskinstance.py:2889} INFO - Executing <Task(_BranchExternalPythonDecoratedOperator): branching_ext_python> on 2024-12-07 00:00:00+00:00
+[2024-12-09T20:24:29.550+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=129) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-09T20:24:29.552+0000] {standard_task_runner.py:72} INFO - Started process 140 to run task
+[2024-12-09T20:24:29.553+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_branch_python_operator_decorator', 'branching_ext_python', 'scheduled__2024-12-07T00:00:00+00:00', '--job-id', '252', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_branch_operator_decorator.py', '--cfg-path', '/tmp/tmpp4j16axz']
+[2024-12-09T20:24:29.554+0000] {standard_task_runner.py:105} INFO - Job 252: Subtask branching_ext_python
+[2024-12-09T20:24:29.599+0000] {task_command.py:467} INFO - Running <TaskInstance: example_branch_python_operator_decorator.branching_ext_python scheduled__2024-12-07T00:00:00+00:00 [running]> on host 8553af9ff67b
+[2024-12-09T20:24:29.676+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_branch_python_operator_decorator' AIRFLOW_CTX_TASK_ID='branching_ext_python' AIRFLOW_CTX_EXECUTION_DATE='2024-12-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-07T00:00:00+00:00'
+[2024-12-09T20:24:29.677+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-09T20:24:29.677+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-09T20:24:29.678+0000] {logging_mixin.py:190} INFO - Current task name:branching_ext_python state:running start_date:2024-12-09 20:24:29.521385+00:00
+[2024-12-09T20:24:29.678+0000] {logging_mixin.py:190} INFO - Dag name:example_branch_python_operator_decorator and current dag run status:running
+[2024-12-09T20:24:29.679+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-09T20:24:30.052+0000] {python.py:513} INFO - Use 'pickle' as serializer.
+[2024-12-09T20:24:30.060+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python /tmp/venv-calla5_3j3sb/script.py /tmp/venv-calla5_3j3sb/script.in /tmp/venv-calla5_3j3sb/script.out /tmp/venv-calla5_3j3sb/string_args.txt /tmp/venv-calla5_3j3sb/termination.log
+[2024-12-09T20:24:30.061+0000] {process_utils.py:190} INFO - Output:
+[2024-12-09T20:24:31.616+0000] {process_utils.py:194} INFO - /home/***/.local/lib/python3.12/site-packages/***/configuration.py:859 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+[2024-12-09T20:24:33.327+0000] {python.py:240} INFO - Done. Returned value was: ext_py_c
+[2024-12-09T20:24:33.328+0000] {branch.py:38} INFO - Branch into ext_py_c
+[2024-12-09T20:24:33.329+0000] {skipmixin.py:230} INFO - Following branch ('ext_py_c',)
+[2024-12-09T20:24:33.343+0000] {skipmixin.py:278} INFO - Skipping tasks [('ext_py_d', -1), ('ext_py_b', -1), ('ext_py_a', -1)]
+[2024-12-09T20:24:33.638+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-09T20:24:33.639+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_branch_python_operator_decorator, task_id=branching_ext_python, run_id=scheduled__2024-12-07T00:00:00+00:00, execution_date=20241207T000000, start_date=20241209T202429, end_date=20241209T202433
+[2024-12-09T20:24:33.679+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-09T20:24:33.680+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-09T20:24:33.680+0000] {logging_mixin.py:190} INFO - Dag name:example_branch_python_operator_decorator queued_at:2024-12-09 20:10:06.961355+00:00
+[2024-12-09T20:24:33.681+0000] {logging_mixin.py:190} INFO - Task hostname:8553af9ff67b operator:_BranchExternalPythonDecoratedOperator
+[2024-12-09T20:24:33.702+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-09T20:24:33.734+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-09T20:24:33.736+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,9 @@
+[2024-12-07T20:07:06.969+0000] {processor.py:186} INFO - Started process (PID=78) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2024-12-07T20:07:06.970+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py for tasks to queue
+[2024-12-07T20:07:06.974+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:06.974+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2024-12-07T20:07:07.489+0000] {processor.py:925} INFO - DAG(s) 'dataset_with_extra_by_yield', 'dataset_with_extra_from_classic_operator', 'dataset_with_extra_by_context' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2024-12-07T20:07:07.513+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:07.513+0000] {dag.py:3239} INFO - Sync 3 DAGs
+[2024-12-07T20:07:07.537+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:07.537+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_by_context to 2024-12-06 00:00:00+00:00, run_after=2024-12-07 00:00:00+00:00
+[2024-12-07T20:07:07.542+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:07.541+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_by_yield to 2024-12-06 00:00:00+00:00, run_after=2024-12-07 00:00:00+00:00
+[2024-12-07T20:07:07.544+0000] {logging_mixin.py:190} INFO - [2024-12-07T20:07:07.544+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_from_classic_operator to 2024-12-06 00:00:00+00:00, run_after=2024-12-07 00:00:00+00:00
+[2024-12-07T20:07:07.565+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py took 0.600 seconds
